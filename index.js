@@ -206,4 +206,13 @@ bot.on('message', message => {
     });
     });
 
+    bot.on('guildMemberCreate', member => {
+      bot.channels.get("412377531920941108").send(`Welcome **${member.user.username}** to **${message.guild.name}**! Hope you have a great time! <:Morty_owo:414206376215052299>\n\nWe now have **${member.guild.members.size}** users!`)
+      member.addRole("412380636922249216")
+    });
+
+    bot.on('guildMemberRemove', member => {
+      bot.channels.get("412377531920941108").send(`**${member.user.username}** has left **${message.guild.name}**! :cry:\n\nWe now have **${member.guild.members.size}** users!`)
+    });
+
 bot.login(process.env.BOT_TOKEN)
