@@ -1,6 +1,6 @@
 {
   "name": "mortybot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "dependencies": {
     "chalk": "^2.3.1",
@@ -8,8 +8,11 @@
     "dateformat": "^3.0.3",
     "discord.js": "^11.3.0",
     "hastebin-gen": "^1.3.1",
+    "node-opus": "^0.2.7",
     "quick.db": "^3.0.3",
-    "random-integer": "^2.0.0"
+    "random-integer": "^2.0.0",
+    "simple-youtube-api": "^5.0.1",
+    "ytdl-core": "^0.20.1"
   },
   "devDependencies": {},
   "scripts": {
