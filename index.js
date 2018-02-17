@@ -54,6 +54,29 @@ require('fs').readdir("./commands/Utility", (err, files) => {
      });
   });
 
+require('fs').readdir("./commands/Music", (err, files) => {
+        if(err) console.error((err));
+        let jsfiles = files.filter(f => f.split(".").pop() === "js");
+        if(jsfiles.length <= 0) {
+            console.log("Do you mind making the commands first?".red);
+            return;
+        }
+
+
+        console.log(chalk.green(`\n\nLoading ${jsfiles.length} Music commands!`));
+
+        jsfiles.forEach((f, i) => {
+            delete require.cache[require.resolve(`./commands/Music/${f}`)]
+            let props = require(`./commands/Music/${f}`)
+            console.log(chalk.magenta(`${i + 1}: ${f} loaded!`));
+            bot.commands.set(props.help.name, props);
+            props.aliases.forEach(alias => {
+            bot.aliases.set(alias, props.help.name);
+        });
+
+        });
+     });
+
   require('fs').readdir("./commands/Economy", (err, files) => {
       if(err) console.error((err));
       let jsfiles = files.filter(f => f.split(".").pop() === "js");
