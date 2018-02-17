@@ -15,7 +15,7 @@ exports.run = (bot, message, args) => {
     .addField(":large_blue_circle: Economy", `\u200b`)
     message.channel.send({ embed: embed })
   }
-  if (cmd.toLowerCase().includes("fun") || cmd.toLowerCase().includes("utility") || cmd.toLowerCase().includes("economy")) {
+  if (cmd.toLowerCase().includes("fun") || cmd.toLowerCase().includes("utility") || cmd.toLowerCase().includes("economy") || cmd.toLowerCase().includes("music")) {
     function convert_case(str) {
   var lower = str.toLowerCase();
   return lower.replace(/(^| )(\w)/g, function(x) {
