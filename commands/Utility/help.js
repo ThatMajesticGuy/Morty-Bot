@@ -13,6 +13,7 @@ exports.run = (bot, message, args) => {
     .addField(":large_blue_circle: Fun", `\u200b`)
     .addField(":large_blue_circle: Utility", `\u200b`)
     .addField(":large_blue_circle: Economy", `\u200b`)
+    .addField(":large_blue_circle: Music", `\u200b`)
     message.channel.send({ embed: embed })
   }
   if (cmd.toLowerCase().includes("fun") || cmd.toLowerCase().includes("utility") || cmd.toLowerCase().includes("economy") || cmd.toLowerCase().includes("music")) {
