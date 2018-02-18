@@ -230,12 +230,12 @@ bot.on('message', message => {
     });
 
     bot.on('guildMemberAdd', member => {
-      bot.channels.get("412377531920941108").send(`Welcome **${member.user.username}** to **${member.guild.name}**! Hope you have a great time! <:Morty_owo:414206376215052299>\n\nWe now have **${member.guild.members.size}** users!\n\n`)
+      bot.channels.get("414847163156398080").send(`Welcome **${member.user.username}** to **${member.guild.name}**! Hope you have a great time! <:Morty_owo:414206376215052299>\n\nWe now have **${member.guild.members.size}** users!\n\n`)
       member.addRole("412380636922249216")
     });
 
     bot.on('guildMemberRemove', member => {
-      bot.channels.get("412377531920941108").send(`**${member.user.username}** has left **${member.guild.name}**! :cry:\n\nWe now have **${member.guild.members.size}** users!\n\n`)
+      bot.channels.get("414847163156398080").send(`**${member.user.username}** has left **${member.guild.name}**! :cry:\n\nWe now have **${member.guild.members.size}** users!\n\n`)
     });
 
 bot.login(process.env.BOT_TOKEN)
