@@ -155,8 +155,6 @@ bot.on("ready", ready => {
     console.log(chalk.blue("Ready to Start!"))
     console.log(chalk.green("-------------------"))
     bot.user.setActivity("with Morty Fans | Prefix is >")
-    bot.user.setAvatar("https://cdn.discordapp.com/attachments/413828401758208018/415638903907811338/JPEG_20180218_194805.jpg")
-    bot.user.setUsername("ChillUnity")
 });
 
 bot.on('message', message => {
